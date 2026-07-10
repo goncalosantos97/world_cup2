@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mundial 2026 — Pontuações</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Mundial 2026 · Bolão da família</p>
+        <h1>Onde cada ponto conta</h1>
+        <p class="subtitle">Fase de grupos e eliminatórias, com cada previsão certa auditável.</p>
+      </header>
+
+      <section class="score-summary" aria-label="Resumo">
+        <div class="summary-card"><span>Líder</span><strong id="leader-name">—</strong><small id="leader-score">—</small></div>
+        <div class="summary-card"><span>Participantes</span><strong id="participant-count">—</strong><small>na classificação</small></div>
+        <div class="summary-card"><span>Atualização</span><strong>10 jul</strong><small>após França–Marrocos</small></div>
+      </section>
+
+      <section class="dashboard" aria-label="Classificação e detalhe de pontos">
+        <aside class="leaderboard-panel">
+          <div class="section-heading"><h2>Classificação</h2><span>Grupos + eliminatórias</span></div>
+          <div id="leaderboard" class="leaderboard" aria-label="Selecionar participante"></div>
+        </aside>
+
+        <article class="detail-panel" aria-live="polite">
+          <div class="detail-topline"><p class="eyebrow">Detalhe de pontos</p><span id="place-badge" class="place-badge">—</span></div>
+          <div class="player-heading"><h2 id="player-name">—</h2><strong id="player-total">—</strong><span>pontos</span></div>
+          <div class="split-totals">
+            <div><span>Fase de grupos</span><strong id="group-total">—</strong></div>
+            <div><span>Eliminatórias</span><strong id="knockout-total">—</strong></div>
+          </div>
+
+          <div class="audit-tabs" role="tablist" aria-label="Tipo de pontuação">
+            <button type="button" class="audit-tab" role="tab" aria-selected="true" data-view="groups">Jogos da fase de grupos</button>
+            <button type="button" class="audit-tab" role="tab" aria-selected="false" data-view="knockout">Palpites das eliminatórias</button>
+          </div>
+
+          <section id="groups-section" class="points-section">
+            <div class="section-heading"><h3>Fase de grupos</h3><span id="group-count">—</span></div>
+            <div id="group-matches" class="match-list"></div>
+          </section>
+
+          <section id="knockout-section" class="points-section" hidden>
+            <div class="section-heading"><h3>Eliminatórias</h3><span id="knockout-count">—</span></div>
+            <div id="knockout-guesses" class="knockout-list"></div>
+          </section>
+        </article>
+      </section>
+    </main>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
