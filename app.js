@@ -27,7 +27,7 @@
     const knockoutCount = Object.values(player.knockoutRight).flat().length;
     document.getElementById('knockout-count').textContent = `${knockoutCount} previsões certas · ${player.knockoutPoints} pontos`;
     document.getElementById('group-matches').innerHTML = player.groupMatches.map(match => `<div class="match-row"><strong>${match.match}</strong><span class="actual">Real ${match.actual}</span><span class="prediction">Palpite ${match.prediction}</span><span class="points">+${match.points}</span></div>`).join('');
-    document.getElementById('knockout-guesses').innerHTML = ['1/16','1/8','1/4','1/2'].filter(stage => player.knockoutRight[stage].length).map(stage => `<div class="stage"><h4>${stage} · ${player.knockoutRight[stage].length * 5} pontos</h4><div class="guess-tags">${player.knockoutRight[stage].map(team => `<span class="guess-tag">${team}</span>`).join('')}</div></div>`).join('');
+    document.getElementById('knockout-guesses').innerHTML = ['1/16','1/8','1/4','1/2','Final'].filter(stage => player.knockoutRight[stage]?.length).map(stage => `<div class="stage"><h4>${stage} · ${player.knockoutRight[stage].length * 5} pontos</h4><div class="guess-tags">${player.knockoutRight[stage].map(team => `<span class="guess-tag">${team}</span>`).join('')}</div></div>`).join('');
     renderLeaderboard();
   }
 
