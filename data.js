@@ -1,6 +1,4491 @@
 (() => {
-  const groupPlayers = [{"name":"Gi","groupPoints":168,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"2–0","points":5},{"match":"Canada vs Bosnia and Herzegovina","actual":"1–1","prediction":"1–1","points":5},{"match":"United States vs Paraguay","actual":"4–1","prediction":"2–1","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–2","points":3},{"match":"Ivory Coast vs Ecuador","actual":"1–0","prediction":"2–1","points":4},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"3–0","points":3},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"2–0","points":3},{"match":"France vs Senegal","actual":"3–1","prediction":"3–1","points":5},{"match":"Iraq vs Norway","actual":"1–4","prediction":"0–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"3–0","points":5},{"match":"Austria vs Jordan","actual":"3–1","prediction":"2–0","points":4},{"match":"Ghana vs Panama","actual":"1–0","prediction":"2–0","points":3},{"match":"England vs Croatia","actual":"4–2","prediction":"2–1","points":3},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"0–2","points":4},{"match":"Switzerland vs Bosnia and Herzegovina","actual":"4–1","prediction":"2–0","points":3},{"match":"Canada vs Qatar","actual":"6–0","prediction":"2–0","points":3},{"match":"Mexico vs South Korea","actual":"1–0","prediction":"2–1","points":4},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"4–0","points":3},{"match":"United States vs Australia","actual":"2–0","prediction":"2–1","points":3},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"2–1","points":5},{"match":"Netherlands vs Sweden","actual":"5–1","prediction":"2–1","points":3},{"match":"Tunisia vs Japan","actual":"0–4","prediction":"1–2","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"2–0","points":3},{"match":"New Zealand vs Egypt","actual":"1–3","prediction":"1–2","points":3},{"match":"France vs Iraq","actual":"3–0","prediction":"3–0","points":5},{"match":"Argentina vs Austria","actual":"2–0","prediction":"2–1","points":3},{"match":"Jordan vs Algeria","actual":"1–2","prediction":"1–2","points":5},{"match":"Panama vs Croatia","actual":"0–1","prediction":"1–2","points":4},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"3–0","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"2–0","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"1–2","points":3},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"2–0","points":4},{"match":"Bosnia and Herzegovina vs Qatar","actual":"3–1","prediction":"2–1","points":3},{"match":"Curaçao vs Ivory Coast","actual":"0–2","prediction":"0–2","points":5},{"match":"Japan vs Sweden","actual":"1–1","prediction":"1–1","points":5},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"0–2","points":4},{"match":"Paraguay vs Australia","actual":"0–0","prediction":"2–2","points":4},{"match":"Norway vs France","actual":"1–4","prediction":"1–2","points":3},{"match":"Senegal vs Iraq","actual":"5–0","prediction":"2–0","points":3},{"match":"Egypt vs Iran","actual":"1–1","prediction":"1–1","points":5},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"0–3","points":3},{"match":"Panama vs England","actual":"0–2","prediction":"0–2","points":5},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"2–1","points":5},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–3","points":3},{"match":"Colombia vs Portugal","actual":"0–0","prediction":"1–1","points":4}]},{"name":"Neni","groupPoints":127,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"2–1","points":3},{"match":"United States vs Paraguay","actual":"4–1","prediction":"2–1","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–2","points":3},{"match":"Ivory Coast vs Ecuador","actual":"1–0","prediction":"2–0","points":3},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"3–0","points":3},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"3–1","points":3},{"match":"Iran vs New Zealand","actual":"2–2","prediction":"2–2","points":5},{"match":"France vs Senegal","actual":"3–1","prediction":"4–0","points":3},{"match":"Iraq vs Norway","actual":"1–4","prediction":"1–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"3–0","points":5},{"match":"Austria vs Jordan","actual":"3–1","prediction":"2–1","points":3},{"match":"Ghana vs Panama","actual":"1–0","prediction":"2–1","points":4},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"1–2","points":3},{"match":"Switzerland vs Bosnia and Herzegovina","actual":"4–1","prediction":"3–1","points":3},{"match":"Canada vs Qatar","actual":"6–0","prediction":"2–1","points":3},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"2–0","points":3},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"2–1","points":5},{"match":"Netherlands vs Sweden","actual":"5–1","prediction":"2–1","points":3},{"match":"Tunisia vs Japan","actual":"0–4","prediction":"1–2","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"2–1","points":3},{"match":"Norway vs Senegal","actual":"3–2","prediction":"2–1","points":4},{"match":"France vs Iraq","actual":"3–0","prediction":"3–0","points":5},{"match":"Argentina vs Austria","actual":"2–0","prediction":"2–0","points":5},{"match":"Panama vs Croatia","actual":"0–1","prediction":"1–2","points":4},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"3–0","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"1–2","points":3},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"1–0","points":3},{"match":"Switzerland vs Canada","actual":"2–1","prediction":"2–0","points":3},{"match":"Czechia vs Mexico","actual":"0–3","prediction":"1–2","points":3},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"1–2","points":3},{"match":"Norway vs France","actual":"1–4","prediction":"1–2","points":3},{"match":"Egypt vs Iran","actual":"1–1","prediction":"2–2","points":4},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"0–2","points":3},{"match":"Uruguay vs Spain","actual":"0–1","prediction":"1–3","points":3},{"match":"Panama vs England","actual":"0–2","prediction":"1–3","points":4},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"2–0","points":3},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–2","points":4}]},{"name":"Maria João","groupPoints":126,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"2–1","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–2","points":3},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"3–0","points":3},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"2–0","points":3},{"match":"France vs Senegal","actual":"3–1","prediction":"3–0","points":3},{"match":"Iraq vs Norway","actual":"1–4","prediction":"1–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"4–0","points":3},{"match":"Austria vs Jordan","actual":"3–1","prediction":"1–0","points":3},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"0–2","points":4},{"match":"Switzerland vs Bosnia and Herzegovina","actual":"4–1","prediction":"2–0","points":3},{"match":"Canada vs Qatar","actual":"6–0","prediction":"1–0","points":3},{"match":"Mexico vs South Korea","actual":"1–0","prediction":"2–0","points":3},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"3–0","points":5},{"match":"Turkey vs Paraguay","actual":"0–1","prediction":"1–2","points":4},{"match":"United States vs Australia","actual":"2–0","prediction":"1–0","points":3},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"2–0","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"4–1","points":3},{"match":"Norway vs Senegal","actual":"3–2","prediction":"2–0","points":3},{"match":"France vs Iraq","actual":"3–0","prediction":"2–0","points":3},{"match":"Argentina vs Austria","actual":"2–0","prediction":"2–0","points":5},{"match":"Panama vs Croatia","actual":"0–1","prediction":"0–2","points":3},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"3–0","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"2–0","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"1–2","points":3},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"1–0","points":3},{"match":"Switzerland vs Canada","actual":"2–1","prediction":"2–1","points":5},{"match":"Czechia vs Mexico","actual":"0–3","prediction":"1–2","points":3},{"match":"South Africa vs South Korea","actual":"1–0","prediction":"1–0","points":5},{"match":"Curaçao vs Ivory Coast","actual":"0–2","prediction":"0–1","points":3},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"1–2","points":3},{"match":"Turkey vs United States","actual":"3–2","prediction":"2–0","points":3},{"match":"Norway vs France","actual":"1–4","prediction":"1–2","points":3},{"match":"Senegal vs Iraq","actual":"5–0","prediction":"2–0","points":3},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"0–3","points":3},{"match":"Uruguay vs Spain","actual":"0–1","prediction":"1–3","points":3},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"2–0","points":3},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"1–3","points":5},{"match":"Congo DR vs Uzbekistan","actual":"3–1","prediction":"2–1","points":3}]},{"name":"Mário","groupPoints":118,"groupMatches":[{"match":"South Korea vs Czechia","actual":"2–1","prediction":"2–0","points":3},{"match":"Canada vs Bosnia and Herzegovina","actual":"1–1","prediction":"1–1","points":5},{"match":"United States vs Paraguay","actual":"4–1","prediction":"2–0","points":3},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"5–0","points":3},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"2–0","points":3},{"match":"Iran vs New Zealand","actual":"2–2","prediction":"1–1","points":4},{"match":"France vs Senegal","actual":"3–1","prediction":"4–0","points":3},{"match":"Iraq vs Norway","actual":"1–4","prediction":"0–1","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"4–1","points":4},{"match":"Austria vs Jordan","actual":"3–1","prediction":"3–0","points":3},{"match":"England vs Croatia","actual":"4–2","prediction":"2–0","points":4},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"0–2","points":4},{"match":"Canada vs Qatar","actual":"6–0","prediction":"3–1","points":3},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"5–0","points":3},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"3–0","points":3},{"match":"Netherlands vs Sweden","actual":"5–1","prediction":"2–1","points":3},{"match":"Tunisia vs Japan","actual":"0–4","prediction":"0–1","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"3–0","points":3},{"match":"Norway vs Senegal","actual":"3–2","prediction":"2–1","points":4},{"match":"Panama vs Croatia","actual":"0–1","prediction":"1–3","points":3},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"3–0","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"2–1","points":4},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"1–3","points":3},{"match":"Bosnia and Herzegovina vs Qatar","actual":"3–1","prediction":"2–0","points":4},{"match":"Czechia vs Mexico","actual":"0–3","prediction":"0–1","points":3},{"match":"South Africa vs South Korea","actual":"1–0","prediction":"2–0","points":3},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"0–2","points":4},{"match":"Turkey vs United States","actual":"3–2","prediction":"2–1","points":4},{"match":"Norway vs France","actual":"1–4","prediction":"0–2","points":3},{"match":"Egypt vs Iran","actual":"1–1","prediction":"1–1","points":5},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"0–1","points":3},{"match":"Cape Verde vs Saudi Arabia","actual":"0–0","prediction":"1–1","points":4},{"match":"Panama vs England","actual":"0–2","prediction":"0–2","points":5},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–4","points":3}]},{"name":"Bruno","groupPoints":105,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"1–0","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–2","points":3},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"2–0","points":3},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"1–0","points":3},{"match":"Iraq vs Norway","actual":"1–4","prediction":"1–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"2–0","points":3},{"match":"Ghana vs Panama","actual":"1–0","prediction":"1–0","points":5},{"match":"England vs Croatia","actual":"4–2","prediction":"2–1","points":3},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"1–3","points":5},{"match":"Canada vs Qatar","actual":"6–0","prediction":"3–0","points":3},{"match":"Mexico vs South Korea","actual":"1–0","prediction":"1–0","points":5},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"3–0","points":5},{"match":"United States vs Australia","actual":"2–0","prediction":"2–0","points":5},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"2–0","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"2–1","points":3},{"match":"France vs Iraq","actual":"3–0","prediction":"1–0","points":3},{"match":"Argentina vs Austria","actual":"2–0","prediction":"2–1","points":3},{"match":"Panama vs Croatia","actual":"0–1","prediction":"0–2","points":3},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"1–0","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"4–0","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"1–2","points":3},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"2–0","points":4},{"match":"Czechia vs Mexico","actual":"0–3","prediction":"1–3","points":3},{"match":"South Africa vs South Korea","actual":"1–0","prediction":"2–0","points":3},{"match":"Curaçao vs Ivory Coast","actual":"0–2","prediction":"0–1","points":3},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"0–3","points":3},{"match":"Senegal vs Iraq","actual":"5–0","prediction":"3–0","points":3},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"0–1","points":3},{"match":"Panama vs England","actual":"0–2","prediction":"0–1","points":3},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"1–0","points":4},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–3","points":3}]},{"name":"João Rede","groupPoints":117,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"3–1","points":4},{"match":"United States vs Paraguay","actual":"4–1","prediction":"2–0","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–3","points":3},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"6–0","points":4},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"2–1","points":3},{"match":"France vs Senegal","actual":"3–1","prediction":"2–0","points":4},{"match":"Iraq vs Norway","actual":"1–4","prediction":"1–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"3–0","points":5},{"match":"Austria vs Jordan","actual":"3–1","prediction":"3–1","points":5},{"match":"Ghana vs Panama","actual":"1–0","prediction":"3–1","points":3},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"1–3","points":5},{"match":"Switzerland vs Bosnia and Herzegovina","actual":"4–1","prediction":"2–0","points":3},{"match":"Canada vs Qatar","actual":"6–0","prediction":"2–0","points":3},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"5–0","points":3},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"5–0","points":3},{"match":"Ecuador vs Curaçao","actual":"0–0","prediction":"2–2","points":4},{"match":"Tunisia vs Japan","actual":"0–4","prediction":"1–2","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"5–0","points":3},{"match":"New Zealand vs Egypt","actual":"1–3","prediction":"1–3","points":5},{"match":"France vs Iraq","actual":"3–0","prediction":"4–0","points":3},{"match":"Argentina vs Austria","actual":"2–0","prediction":"3–1","points":4},{"match":"Panama vs Croatia","actual":"0–1","prediction":"0–3","points":3},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"2–0","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"4–0","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"1–3","points":3},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"3–0","points":3},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"1–3","points":5},{"match":"Turkey vs United States","actual":"3–2","prediction":"2–0","points":3},{"match":"Senegal vs Iraq","actual":"5–0","prediction":"2–1","points":3},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"0–3","points":3},{"match":"Uruguay vs Spain","actual":"0–1","prediction":"1–3","points":3},{"match":"Panama vs England","actual":"0–2","prediction":"0–5","points":3},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"3–0","points":3},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–4","points":3}]},{"name":"Diogo","groupPoints":155,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"2–1","points":3},{"match":"United States vs Paraguay","actual":"4–1","prediction":"2–1","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–2","points":3},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"4–0","points":3},{"match":"Netherlands vs Japan","actual":"2–2","prediction":"1–1","points":4},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"1–0","points":3},{"match":"France vs Senegal","actual":"3–1","prediction":"2–1","points":3},{"match":"Iraq vs Norway","actual":"1–4","prediction":"0–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"2–0","points":3},{"match":"Austria vs Jordan","actual":"3–1","prediction":"2–0","points":4},{"match":"Ghana vs Panama","actual":"1–0","prediction":"2–1","points":4},{"match":"England vs Croatia","actual":"4–2","prediction":"2–1","points":3},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"1–2","points":3},{"match":"Switzerland vs Bosnia and Herzegovina","actual":"4–1","prediction":"2–1","points":3},{"match":"Canada vs Qatar","actual":"6–0","prediction":"2–0","points":3},{"match":"Mexico vs South Korea","actual":"1–0","prediction":"1–0","points":5},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"4–0","points":3},{"match":"United States vs Australia","actual":"2–0","prediction":"2–0","points":5},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"2–1","points":5},{"match":"Netherlands vs Sweden","actual":"5–1","prediction":"2–1","points":3},{"match":"Tunisia vs Japan","actual":"0–4","prediction":"0–2","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"3–0","points":3},{"match":"New Zealand vs Egypt","actual":"1–3","prediction":"0–2","points":4},{"match":"France vs Iraq","actual":"3–0","prediction":"4–0","points":3},{"match":"Argentina vs Austria","actual":"2–0","prediction":"2–1","points":3},{"match":"Jordan vs Algeria","actual":"1–2","prediction":"0–2","points":3},{"match":"Panama vs Croatia","actual":"0–1","prediction":"0–2","points":3},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"2–1","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"2–0","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"0–2","points":3},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"3–0","points":3},{"match":"Bosnia and Herzegovina vs Qatar","actual":"3–1","prediction":"2–1","points":3},{"match":"Curaçao vs Ivory Coast","actual":"0–2","prediction":"0–2","points":5},{"match":"Japan vs Sweden","actual":"1–1","prediction":"1–1","points":5},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"0–3","points":3},{"match":"Norway vs France","actual":"1–4","prediction":"1–2","points":3},{"match":"Senegal vs Iraq","actual":"5–0","prediction":"2–0","points":3},{"match":"Egypt vs Iran","actual":"1–1","prediction":"1–1","points":5},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"0–3","points":3},{"match":"Cape Verde vs Saudi Arabia","actual":"0–0","prediction":"1–1","points":4},{"match":"Uruguay vs Spain","actual":"0–1","prediction":"1–2","points":4},{"match":"Panama vs England","actual":"0–2","prediction":"0–3","points":3},{"match":"Algeria vs Austria","actual":"3–3","prediction":"1–1","points":4},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–3","points":3},{"match":"Colombia vs Portugal","actual":"0–0","prediction":"1–1","points":4}]},{"name":"Maria","groupPoints":154,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"2–1","points":3},{"match":"South Korea vs Czechia","actual":"2–1","prediction":"3–2","points":4},{"match":"Canada vs Bosnia and Herzegovina","actual":"1–1","prediction":"2–2","points":4},{"match":"United States vs Paraguay","actual":"4–1","prediction":"3–2","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"1–2","points":4},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"4–0","points":3},{"match":"France vs Senegal","actual":"3–1","prediction":"4–0","points":3},{"match":"Iraq vs Norway","actual":"1–4","prediction":"1–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"2–1","points":3},{"match":"Austria vs Jordan","actual":"3–1","prediction":"2–1","points":3},{"match":"Ghana vs Panama","actual":"1–0","prediction":"3–2","points":4},{"match":"England vs Croatia","actual":"4–2","prediction":"2–1","points":3},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"0–4","points":3},{"match":"Czechia vs South Africa","actual":"1–1","prediction":"2–2","points":4},{"match":"Switzerland vs Bosnia and Herzegovina","actual":"4–1","prediction":"4–1","points":5},{"match":"Canada vs Qatar","actual":"6–0","prediction":"3–0","points":3},{"match":"Mexico vs South Korea","actual":"1–0","prediction":"3–0","points":3},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"4–0","points":3},{"match":"Turkey vs Paraguay","actual":"0–1","prediction":"2–3","points":4},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"4–1","points":3},{"match":"Tunisia vs Japan","actual":"0–4","prediction":"1–3","points":3},{"match":"Uruguay vs Cape Verde","actual":"2–2","prediction":"2–2","points":5},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"3–0","points":3},{"match":"New Zealand vs Egypt","actual":"1–3","prediction":"2–3","points":3},{"match":"France vs Iraq","actual":"3–0","prediction":"3–0","points":5},{"match":"Argentina vs Austria","actual":"2–0","prediction":"3–0","points":3},{"match":"Jordan vs Algeria","actual":"1–2","prediction":"0–2","points":3},{"match":"Panama vs Croatia","actual":"0–1","prediction":"0–1","points":5},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"1–0","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"3–1","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"1–2","points":3},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"2–0","points":4},{"match":"Czechia vs Mexico","actual":"0–3","prediction":"0–2","points":3},{"match":"South Africa vs South Korea","actual":"1–0","prediction":"3–1","points":3},{"match":"Curaçao vs Ivory Coast","actual":"0–2","prediction":"1–2","points":3},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"1–3","points":5},{"match":"Paraguay vs Australia","actual":"0–0","prediction":"1–1","points":4},{"match":"Norway vs France","actual":"1–4","prediction":"1–2","points":3},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"2–3","points":3},{"match":"Cape Verde vs Saudi Arabia","actual":"0–0","prediction":"1–1","points":4},{"match":"Uruguay vs Spain","actual":"0–1","prediction":"2–3","points":4},{"match":"Panama vs England","actual":"0–2","prediction":"1–2","points":3},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"2–1","points":5},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–4","points":3}]},{"name":"Máriozinho","groupPoints":153,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"2–1","points":3},{"match":"Canada vs Bosnia and Herzegovina","actual":"1–1","prediction":"1–1","points":5},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–3","points":3},{"match":"Ivory Coast vs Ecuador","actual":"1–0","prediction":"3–0","points":3},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"5–0","points":3},{"match":"Netherlands vs Japan","actual":"2–2","prediction":"0–0","points":4},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"2–1","points":3},{"match":"France vs Senegal","actual":"3–1","prediction":"3–1","points":5},{"match":"Iraq vs Norway","actual":"1–4","prediction":"0–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"3–1","points":3},{"match":"Austria vs Jordan","actual":"3–1","prediction":"2–0","points":4},{"match":"Ghana vs Panama","actual":"1–0","prediction":"2–0","points":3},{"match":"England vs Croatia","actual":"4–2","prediction":"2–1","points":3},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"0–2","points":4},{"match":"Canada vs Qatar","actual":"6–0","prediction":"2–0","points":3},{"match":"Mexico vs South Korea","actual":"1–0","prediction":"1–0","points":5},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"4–0","points":3},{"match":"Scotland vs Morocco","actual":"0–1","prediction":"1–2","points":4},{"match":"United States vs Australia","actual":"2–0","prediction":"2–1","points":3},{"match":"Netherlands vs Sweden","actual":"5–1","prediction":"2–1","points":3},{"match":"Tunisia vs Japan","actual":"0–4","prediction":"0–2","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"2–0","points":3},{"match":"New Zealand vs Egypt","actual":"1–3","prediction":"0–2","points":4},{"match":"France vs Iraq","actual":"3–0","prediction":"4–0","points":3},{"match":"Argentina vs Austria","actual":"2–0","prediction":"2–1","points":3},{"match":"Jordan vs Algeria","actual":"1–2","prediction":"0–2","points":3},{"match":"Panama vs Croatia","actual":"0–1","prediction":"0–2","points":3},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"2–0","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"3–1","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"1–2","points":3},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"3–0","points":3},{"match":"South Africa vs South Korea","actual":"1–0","prediction":"2–1","points":4},{"match":"Curaçao vs Ivory Coast","actual":"0–2","prediction":"1–3","points":4},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"0–2","points":4},{"match":"Norway vs France","actual":"1–4","prediction":"1–2","points":3},{"match":"Senegal vs Iraq","actual":"5–0","prediction":"3–1","points":3},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"1–2","points":3},{"match":"Cape Verde vs Saudi Arabia","actual":"0–0","prediction":"1–1","points":4},{"match":"Panama vs England","actual":"0–2","prediction":"0–2","points":5},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"2–1","points":5},{"match":"Algeria vs Austria","actual":"3–3","prediction":"1–1","points":4},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–3","points":3},{"match":"Colombia vs Portugal","actual":"0–0","prediction":"2–2","points":4},{"match":"Congo DR vs Uzbekistan","actual":"3–1","prediction":"2–1","points":3}]},{"name":"Nucha","groupPoints":135,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"2–0","points":5},{"match":"United States vs Paraguay","actual":"4–1","prediction":"2–0","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–1","points":5},{"match":"Australia vs Turkey","actual":"2–0","prediction":"1–0","points":3},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"2–0","points":3},{"match":"Saudi Arabia vs Uruguay","actual":"1–1","prediction":"1–1","points":5},{"match":"France vs Senegal","actual":"3–1","prediction":"2–0","points":4},{"match":"Iraq vs Norway","actual":"1–4","prediction":"1–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"1–0","points":3},{"match":"Austria vs Jordan","actual":"3–1","prediction":"2–0","points":4},{"match":"England vs Croatia","actual":"4–2","prediction":"2–1","points":3},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"1–2","points":3},{"match":"Czechia vs South Africa","actual":"1–1","prediction":"1–1","points":5},{"match":"Switzerland vs Bosnia and Herzegovina","actual":"4–1","prediction":"1–0","points":3},{"match":"Canada vs Qatar","actual":"6–0","prediction":"2–0","points":3},{"match":"Mexico vs South Korea","actual":"1–0","prediction":"1–0","points":5},{"match":"Turkey vs Paraguay","actual":"0–1","prediction":"1–2","points":4},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"2–0","points":3},{"match":"Ecuador vs Curaçao","actual":"0–0","prediction":"1–1","points":4},{"match":"Netherlands vs Sweden","actual":"5–1","prediction":"2–0","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"2–1","points":3},{"match":"Norway vs Senegal","actual":"3–2","prediction":"2–1","points":4},{"match":"France vs Iraq","actual":"3–0","prediction":"2–0","points":3},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"2–0","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"1–2","points":3},{"match":"South Africa vs South Korea","actual":"1–0","prediction":"1–0","points":5},{"match":"Curaçao vs Ivory Coast","actual":"0–2","prediction":"0–1","points":3},{"match":"Japan vs Sweden","actual":"1–1","prediction":"1–1","points":5},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"1–2","points":3},{"match":"Paraguay vs Australia","actual":"0–0","prediction":"1–1","points":4},{"match":"Norway vs France","actual":"1–4","prediction":"1–2","points":3},{"match":"Cape Verde vs Saudi Arabia","actual":"0–0","prediction":"1–1","points":4},{"match":"Uruguay vs Spain","actual":"0–1","prediction":"0–2","points":3},{"match":"Panama vs England","actual":"0–2","prediction":"1–2","points":3},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"2–1","points":5},{"match":"Colombia vs Portugal","actual":"0–0","prediction":"1–1","points":4},{"match":"Congo DR vs Uzbekistan","actual":"3–1","prediction":"2–1","points":3}]},{"name":"Tio Zé","groupPoints":143,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"3–1","points":4},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–3","points":3},{"match":"Ivory Coast vs Ecuador","actual":"1–0","prediction":"2–1","points":4},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"6–0","points":4},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"2–0","points":3},{"match":"France vs Senegal","actual":"3–1","prediction":"1–0","points":3},{"match":"Iraq vs Norway","actual":"1–4","prediction":"0–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"3–0","points":5},{"match":"Austria vs Jordan","actual":"3–1","prediction":"2–0","points":4},{"match":"England vs Croatia","actual":"4–2","prediction":"2–1","points":3},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"0–2","points":4},{"match":"Switzerland vs Bosnia and Herzegovina","actual":"4–1","prediction":"2–1","points":3},{"match":"Mexico vs South Korea","actual":"1–0","prediction":"1–0","points":5},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"5–0","points":3},{"match":"United States vs Australia","actual":"2–0","prediction":"2–1","points":3},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"3–1","points":3},{"match":"Netherlands vs Sweden","actual":"5–1","prediction":"2–1","points":3},{"match":"Tunisia vs Japan","actual":"0–4","prediction":"1–2","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"2–0","points":3},{"match":"Belgium vs Iran","actual":"0–0","prediction":"2–2","points":4},{"match":"New Zealand vs Egypt","actual":"1–3","prediction":"1–2","points":3},{"match":"France vs Iraq","actual":"3–0","prediction":"3–1","points":3},{"match":"Argentina vs Austria","actual":"2–0","prediction":"2–1","points":3},{"match":"Panama vs Croatia","actual":"0–1","prediction":"1–2","points":4},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"3–0","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"2–0","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"1–3","points":3},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"3–0","points":3},{"match":"Switzerland vs Canada","actual":"2–1","prediction":"2–0","points":3},{"match":"Bosnia and Herzegovina vs Qatar","actual":"3–1","prediction":"2–0","points":4},{"match":"Curaçao vs Ivory Coast","actual":"0–2","prediction":"0–4","points":3},{"match":"Japan vs Sweden","actual":"1–1","prediction":"1–1","points":5},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"0–2","points":4},{"match":"Turkey vs United States","actual":"3–2","prediction":"2–1","points":4},{"match":"Paraguay vs Australia","actual":"0–0","prediction":"2–2","points":4},{"match":"Senegal vs Iraq","actual":"5–0","prediction":"2–1","points":3},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"0–2","points":3},{"match":"Uruguay vs Spain","actual":"0–1","prediction":"1–2","points":4},{"match":"Panama vs England","actual":"0–2","prediction":"0–3","points":3},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"2–1","points":5},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–3","points":3}]},{"name":"Norberto","groupPoints":135,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"1–0","points":3},{"match":"United States vs Paraguay","actual":"4–1","prediction":"2–1","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–1","points":5},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"5–1","points":3},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"1–0","points":3},{"match":"Saudi Arabia vs Uruguay","actual":"1–1","prediction":"1–1","points":5},{"match":"Iraq vs Norway","actual":"1–4","prediction":"0–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"1–0","points":3},{"match":"Ghana vs Panama","actual":"1–0","prediction":"3–0","points":3},{"match":"Portugal vs Congo DR","actual":"1–1","prediction":"1–1","points":5},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"0–3","points":3},{"match":"Switzerland vs Bosnia and Herzegovina","actual":"4–1","prediction":"3–0","points":4},{"match":"Canada vs Qatar","actual":"6–0","prediction":"3–1","points":3},{"match":"Mexico vs South Korea","actual":"1–0","prediction":"2–0","points":3},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"4–1","points":4},{"match":"Scotland vs Morocco","actual":"0–1","prediction":"0–2","points":3},{"match":"Turkey vs Paraguay","actual":"0–1","prediction":"0–1","points":5},{"match":"United States vs Australia","actual":"2–0","prediction":"3–0","points":3},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"2–1","points":5},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"3–1","points":3},{"match":"Belgium vs Iran","actual":"0–0","prediction":"0–0","points":5},{"match":"New Zealand vs Egypt","actual":"1–3","prediction":"0–1","points":3},{"match":"France vs Iraq","actual":"3–0","prediction":"3–1","points":3},{"match":"Panama vs Croatia","actual":"0–1","prediction":"0–1","points":5},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"4–0","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"0–2","points":3},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"1–0","points":3},{"match":"Switzerland vs Canada","actual":"2–1","prediction":"2–0","points":3},{"match":"Bosnia and Herzegovina vs Qatar","actual":"3–1","prediction":"4–1","points":3},{"match":"Curaçao vs Ivory Coast","actual":"0–2","prediction":"0–2","points":5},{"match":"Japan vs Sweden","actual":"1–1","prediction":"1–1","points":5},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"0–1","points":3},{"match":"Senegal vs Iraq","actual":"5–0","prediction":"2–0","points":3},{"match":"Egypt vs Iran","actual":"1–1","prediction":"1–1","points":5},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"0–3","points":3},{"match":"Panama vs England","actual":"0–2","prediction":"0–2","points":5},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–1","points":3}]},{"name":"Susana","groupPoints":122,"groupMatches":[{"match":"South Korea vs Czechia","actual":"2–1","prediction":"2–1","points":5},{"match":"United States vs Paraguay","actual":"4–1","prediction":"2–1","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–3","points":3},{"match":"Qatar vs Switzerland","actual":"1–1","prediction":"1–1","points":5},{"match":"Ivory Coast vs Ecuador","actual":"1–0","prediction":"2–1","points":4},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"3–0","points":3},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"2–0","points":3},{"match":"France vs Senegal","actual":"3–1","prediction":"2–1","points":3},{"match":"Iraq vs Norway","actual":"1–4","prediction":"1–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"3–1","points":3},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"1–3","points":5},{"match":"Canada vs Qatar","actual":"6–0","prediction":"2–1","points":3},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"4–1","points":4},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"4–0","points":3},{"match":"Ecuador vs Curaçao","actual":"0–0","prediction":"1–1","points":4},{"match":"Netherlands vs Sweden","actual":"5–1","prediction":"3–1","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"3–1","points":3},{"match":"New Zealand vs Egypt","actual":"1–3","prediction":"1–2","points":3},{"match":"Norway vs Senegal","actual":"3–2","prediction":"3–0","points":3},{"match":"France vs Iraq","actual":"3–0","prediction":"4–1","points":4},{"match":"Argentina vs Austria","actual":"2–0","prediction":"3–0","points":3},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"3–1","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"2–0","points":3},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"2–3","points":3},{"match":"Switzerland vs Canada","actual":"2–1","prediction":"3–0","points":3},{"match":"Bosnia and Herzegovina vs Qatar","actual":"3–1","prediction":"2–1","points":3},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"1–3","points":5},{"match":"Turkey vs United States","actual":"3–2","prediction":"2–1","points":4},{"match":"Norway vs France","actual":"1–4","prediction":"1–2","points":3},{"match":"Egypt vs Iran","actual":"1–1","prediction":"2–2","points":4},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"1–4","points":3},{"match":"Uruguay vs Spain","actual":"0–1","prediction":"2–3","points":4},{"match":"Panama vs England","actual":"0–2","prediction":"1–4","points":3},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"2–0","points":3},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"1–3","points":5}]},{"name":"Gonçalo","groupPoints":165,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"2–0","points":5},{"match":"South Korea vs Czechia","actual":"2–1","prediction":"2–1","points":5},{"match":"United States vs Paraguay","actual":"4–1","prediction":"1–0","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–3","points":3},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"5–0","points":3},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"2–1","points":3},{"match":"France vs Senegal","actual":"3–1","prediction":"3–0","points":3},{"match":"Iraq vs Norway","actual":"1–4","prediction":"0–1","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"2–0","points":3},{"match":"Austria vs Jordan","actual":"3–1","prediction":"2–1","points":3},{"match":"Ghana vs Panama","actual":"1–0","prediction":"2–1","points":4},{"match":"England vs Croatia","actual":"4–2","prediction":"2–0","points":4},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"0–2","points":4},{"match":"Switzerland vs Bosnia and Herzegovina","actual":"4–1","prediction":"2–0","points":3},{"match":"Mexico vs South Korea","actual":"1–0","prediction":"2–1","points":4},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"5–0","points":3},{"match":"Scotland vs Morocco","actual":"0–1","prediction":"1–2","points":4},{"match":"United States vs Australia","actual":"2–0","prediction":"2–0","points":5},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"3–1","points":3},{"match":"Netherlands vs Sweden","actual":"5–1","prediction":"2–0","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"3–0","points":3},{"match":"New Zealand vs Egypt","actual":"1–3","prediction":"0–1","points":3},{"match":"Norway vs Senegal","actual":"3–2","prediction":"1–0","points":4},{"match":"France vs Iraq","actual":"3–0","prediction":"3–0","points":5},{"match":"Argentina vs Austria","actual":"2–0","prediction":"2–1","points":3},{"match":"Jordan vs Algeria","actual":"1–2","prediction":"0–2","points":3},{"match":"Panama vs Croatia","actual":"0–1","prediction":"0–1","points":5},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"3–0","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"2–1","points":4},{"match":"Scotland vs Brazil","actual":"0–3","prediction":"0–2","points":3},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"2–0","points":4},{"match":"Switzerland vs Canada","actual":"2–1","prediction":"2–1","points":5},{"match":"Czechia vs Mexico","actual":"0–3","prediction":"1–2","points":3},{"match":"Curaçao vs Ivory Coast","actual":"0–2","prediction":"0–2","points":5},{"match":"Japan vs Sweden","actual":"1–1","prediction":"1–1","points":5},{"match":"Tunisia vs Netherlands","actual":"1–3","prediction":"0–2","points":4},{"match":"Turkey vs United States","actual":"3–2","prediction":"2–1","points":4},{"match":"Norway vs France","actual":"1–4","prediction":"0–2","points":3},{"match":"Senegal vs Iraq","actual":"5–0","prediction":"1–0","points":3},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"0–3","points":3},{"match":"Uruguay vs Spain","actual":"0–1","prediction":"1–2","points":4},{"match":"Panama vs England","actual":"0–2","prediction":"0–2","points":5},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"1–0","points":4},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–3","points":3},{"match":"Congo DR vs Uzbekistan","actual":"3–1","prediction":"1–0","points":3}]},{"name":"Tio Fredo","groupPoints":145,"groupMatches":[{"match":"Mexico vs South Africa","actual":"2–0","prediction":"2–1","points":3},{"match":"United States vs Paraguay","actual":"4–1","prediction":"1–0","points":3},{"match":"Haiti vs Scotland","actual":"0–1","prediction":"0–3","points":3},{"match":"Brazil vs Morocco","actual":"1–1","prediction":"0–0","points":4},{"match":"Ivory Coast vs Ecuador","actual":"1–0","prediction":"2–0","points":3},{"match":"Germany vs Curaçao","actual":"7–1","prediction":"3–0","points":3},{"match":"Sweden vs Tunisia","actual":"5–1","prediction":"1–0","points":3},{"match":"Belgium vs Egypt","actual":"1–1","prediction":"0–0","points":4},{"match":"France vs Senegal","actual":"3–1","prediction":"4–0","points":3},{"match":"Iraq vs Norway","actual":"1–4","prediction":"0–2","points":3},{"match":"Argentina vs Algeria","actual":"3–0","prediction":"2–0","points":3},{"match":"Austria vs Jordan","actual":"3–1","prediction":"1–0","points":3},{"match":"Ghana vs Panama","actual":"1–0","prediction":"1–0","points":5},{"match":"England vs Croatia","actual":"4–2","prediction":"1–0","points":3},{"match":"Uzbekistan vs Colombia","actual":"1–3","prediction":"0–2","points":4},{"match":"Czechia vs South Africa","actual":"1–1","prediction":"1–1","points":5},{"match":"Canada vs Qatar","actual":"6–0","prediction":"1–0","points":3},{"match":"Brazil vs Haiti","actual":"3–0","prediction":"2–0","points":3},{"match":"Scotland vs Morocco","actual":"0–1","prediction":"0–1","points":5},{"match":"Germany vs Ivory Coast","actual":"2–1","prediction":"2–0","points":3},{"match":"Tunisia vs Japan","actual":"0–4","prediction":"0–1","points":3},{"match":"Spain vs Saudi Arabia","actual":"4–0","prediction":"3–0","points":3},{"match":"France vs Iraq","actual":"3–0","prediction":"3–0","points":5},{"match":"Argentina vs Austria","actual":"2–0","prediction":"1–0","points":3},{"match":"Panama vs Croatia","actual":"0–1","prediction":"0–2","points":3},{"match":"Portugal vs Uzbekistan","actual":"5–0","prediction":"2–0","points":3},{"match":"Colombia vs Congo DR","actual":"1–0","prediction":"1–0","points":5},{"match":"Morocco vs Haiti","actual":"4–2","prediction":"2–0","points":4},{"match":"Switzerland vs Canada","actual":"2–1","prediction":"2–0","points":3},{"match":"Bosnia and Herzegovina vs Qatar","actual":"3–1","prediction":"1–0","points":3},{"match":"Czechia vs Mexico","actual":"0–3","prediction":"1–2","points":3},{"match":"South Africa vs South Korea","actual":"1–0","prediction":"1–0","points":5},{"match":"Turkey vs United States","actual":"3–2","prediction":"2–1","points":4},{"match":"Norway vs France","actual":"1–4","prediction":"0–2","points":3},{"match":"Senegal vs Iraq","actual":"5–0","prediction":"1–0","points":3},{"match":"New Zealand vs Belgium","actual":"1–5","prediction":"0–2","points":3},{"match":"Cape Verde vs Saudi Arabia","actual":"0–0","prediction":"1–1","points":4},{"match":"Uruguay vs Spain","actual":"0–1","prediction":"0–2","points":3},{"match":"Panama vs England","actual":"0–2","prediction":"0–2","points":5},{"match":"Croatia vs Ghana","actual":"2–1","prediction":"1–0","points":4},{"match":"Jordan vs Argentina","actual":"1–3","prediction":"0–2","points":4}]}];
-  const knockoutPlayers = [{"name":"Diogo","right":{"1/16":["Germany","Paraguay","France","Sweden","Canada","Netherlands","Morocco","Colombia","Croatia","Spain","Austria","United States","Algeria","Belgium","Brazil","Japan","Ecuador","Senegal","Mexico","England","Norway","Argentina","Egypt","Switzerland","Portugal","Ivory Coast"],"1/8":["France","Canada","Spain","United States","Belgium","Brazil","Mexico","England","Argentina","Switzerland","Portugal"],"1/4":["France","Spain","Belgium","England","Argentina"],"1/2":["France","Spain","Argentina"],"Final":["Spain"]},"total":230},{"name":"Gi","right":{"1/16":["Germany","Morocco","France","Japan","Canada","Netherlands","Colombia","Croatia","Spain","Austria","United States","Bosnia and Herzegovina","Belgium","Brazil","Sweden","Ivory Coast","Norway","Mexico","Ecuador","England","Senegal","Argentina","Egypt","Switzerland","Portugal","Ghana"],"1/8":["France","Canada","Spain","United States","Belgium","Brazil","Norway","Mexico","England","Argentina","Switzerland","Portugal"],"1/4":["France","Spain","England","Argentina"],"1/2":["France","Spain"],"Final":["Spain"]},"total":225},{"name":"Gonçalo","right":{"1/16":["Germany","France","Paraguay","Netherlands","Morocco","Colombia","Croatia","Spain","Austria","Canada","Belgium","Brazil","Sweden","Ecuador","Norway","Mexico","Ivory Coast","England","Congo DR","Argentina","United States","Egypt","Switzerland","Portugal","Algeria"],"1/8":["France","Colombia","Spain","Belgium","Brazil","Norway","Mexico","England","Argentina","United States","Switzerland","Portugal"],"1/4":["France","Spain","Belgium","England","Argentina"],"1/2":["France","Spain","England"],"Final":["Spain"]},"total":230},{"name":"Maria","right":{"1/16":["Germany","Paraguay","France","Japan","South Africa","Switzerland","Netherlands","Portugal","Croatia","Spain","Austria","United States","Ivory Coast","Belgium","Algeria","Brazil","Sweden","Ecuador","Senegal","Mexico","Morocco","England","Norway","Argentina","Australia","Egypt","Canada","Colombia","Ghana"],"1/8":["France","Switzerland","Portugal","Spain","United States","Belgium","Brazil","Morocco","England","Argentina","Colombia"],"1/4":["France","Switzerland","Spain","Belgium","England","Argentina"],"1/2":["France","Argentina"]},"total":240},{"name":"Mariozinho","right":{"1/16":["Ivory Coast","Australia","France","Japan","Switzerland","Netherlands","Morocco","Colombia","Croatia","Spain","Austria","Bosnia and Herzegovina","Belgium","South Africa","Brazil","Sweden","Germany","Norway","Mexico","England","Senegal","Argentina","United States","Egypt","Canada","Algeria","Portugal","Ghana"],"1/8":["France","Switzerland","Morocco","Colombia","Spain","Belgium","Brazil","Mexico","England","Argentina","United States","Canada","Portugal"],"1/4":["France","Morocco","Spain","Belgium","England","Argentina"],"1/2":["France","Spain"]},"total":245},{"name":"Neni","right":{"1/16":["Germany","Morocco","France","Australia","Canada","Netherlands","Colombia","Croatia","Spain","Austria","United States","Belgium","Brazil","Sweden","Ivory Coast","Norway","Mexico","England","Ecuador","Argentina","Switzerland","Japan","Portugal","Ghana"],"1/8":["France","Canada","Spain","United States","Belgium","Brazil","Norway","Mexico","England","Argentina","Switzerland","Portugal"],"1/4":["France","Spain","Belgium","England","Argentina"],"1/2":["France","Spain"]},"total":215},{"name":"Norberto","right":{"1/16":["Germany","Senegal","Egypt","Mexico","Bosnia and Herzegovina","Netherlands","Morocco","Colombia","Ghana","Spain","Austria","United States","Canada","Belgium","Norway","Brazil","Sweden","Ecuador","France","Ivory Coast","England","Congo DR","Argentina","Paraguay","Switzerland","Portugal","Croatia"],"1/8":["Mexico","Spain","United States","Belgium","Brazil","France","England","Paraguay","Switzerland","Portugal"],"1/4":["Spain","Belgium"],"1/2":["Spain"],"Final":["Spain"]},"total":205},{"name":"Nucha","right":{"1/16":["Germany","Paraguay","France","Mexico","Switzerland","Netherlands","Colombia","Croatia","Spain","Argentina","United States","South Africa","Brazil","Ecuador","Norway","Ivory Coast","England","Congo DR","Austria","Australia","Belgium","Canada","Egypt","Portugal"],"1/8":["France","Switzerland","Spain","Brazil","England","Canada","Portugal"],"1/4":["Spain"],"1/2":["Spain"],"Final":["Spain"]},"total":170},{"name":"Susana","right":{"1/16":["Germany","United States","France","Egypt","South Africa","Bosnia and Herzegovina","Netherlands","Colombia","Spain","Switzerland","Belgium","Brazil","Sweden","Ivory Coast","Norway","England","Argentina","Australia","Canada","Austria","Portugal","Croatia"],"1/8":["France","Spain","Switzerland","Belgium","Brazil","Norway","England","Argentina","Portugal"],"1/4":["France","Spain","Belgium","England","Argentina"],"1/2":["France","Spain","Argentina"],"Final":["Spain"]},"total":200},{"name":"Bruno","right":{"1/16":["Germany","Morocco","Senegal","United States","Switzerland","Netherlands","Colombia","Croatia","Austria","Ivory Coast","Belgium","South Africa","Brazil","Sweden","Ecuador","Norway","Mexico","England","France","Argentina","Spain","Paraguay","Canada","Portugal","Ghana"],"1/8":["Colombia","Belgium","Brazil","Norway","Mexico","England","Spain","Paraguay","Canada","Portugal"],"1/4":["Belgium","England","Spain"],"1/2":[]},"total":190},{"name":"Maria João","right":{"1/16":["Germany","United States","France","Cape Verde","Canada","Sweden","Colombia","England","Spain","Austria","Paraguay","Senegal","Belgium","South Africa","Brazil","Netherlands","Ecuador","Norway","Mexico","Ivory Coast","Croatia","Congo DR","Argentina","Egypt","Switzerland","Portugal"],"1/8":["France","Colombia","Spain","Paraguay","Belgium","Brazil","Norway","Mexico","Argentina","Switzerland","Portugal"],"1/4":["Spain","Argentina"],"1/2":["Spain"],"Final":["Spain"]},"total":205},{"name":"Mário","right":{"1/16":["Germany","Paraguay","France","Japan","South Africa","Canada","Netherlands","Colombia","Croatia","Spain","Austria","Switzerland","Belgium","Brazil","Sweden","Ecuador","Norway","Mexico","Ivory Coast","England","Argentina","United States","Bosnia and Herzegovina","Portugal","Ghana"],"1/8":["France","Spain","Belgium","Brazil","Norway","Mexico","England","Argentina","United States","Portugal"],"1/4":["France","Spain","Belgium","England","Argentina"],"1/2":["France","Spain"],"Final":["Spain"]},"total":215},{"name":"Tio Fredo","right":{"1/16":["Germany","France","Australia","Bosnia and Herzegovina","Japan","Brazil","Colombia","Croatia","Spain","Austria","Canada","Belgium","South Africa","Morocco","Sweden","Ivory Coast","Norway","Mexico","England","Senegal","Argentina","United States","Switzerland","Egypt","Portugal","Ghana"],"1/8":["France","Colombia","Spain","Belgium","Morocco","Mexico","England","Argentina","United States","Switzerland","Portugal"],"1/4":["France","Spain","Belgium","Morocco","England","Argentina"],"1/2":["France","Spain"]},"total":225},{"name":"Tio Zé","right":{"1/16":["Germany","Morocco","France","Japan","Bosnia and Herzegovina","Netherlands","Colombia","Croatia","Spain","Austria","Ecuador","Belgium","Brazil","Sweden","Ivory Coast","Norway","Mexico","Cape Verde","England","Argentina","United States","Switzerland","Egypt","Portugal","Senegal"],"1/8":["France","Spain","Belgium","Brazil","Norway","Mexico","England","Argentina","Switzerland","Portugal"],"1/4":["Spain","England","Argentina"],"1/2":["Spain","England"],"Final":["Spain"]},"total":205},{"name":"João Rede","right":{"1/16":["Germany","United States","France","Sweden","Canada","Japan","Colombia","Croatia","Spain","Austria","Belgium","Mexico","Brazil","Netherlands","Senegal","Morocco","England","Argentina","Australia","Switzerland","Egypt","Portugal","Norway"],"1/8":["France","Canada","Spain","Belgium","Brazil","England","Argentina","Switzerland","Portugal"],"1/4":["Belgium","Argentina"],"1/2":[]},"total":170}];
+  const groupPlayers = [
+  {
+    "name": "Gi",
+    "groupPoints": 168,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "2–0",
+        "points": 5
+      },
+      {
+        "match": "Canada vs Bosnia and Herzegovina",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "United States vs Paraguay",
+        "actual": "4–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Ivory Coast vs Ecuador",
+        "actual": "1–0",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "3–1",
+        "points": 5
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "3–0",
+        "points": 5
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Ghana vs Panama",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "England vs Croatia",
+        "actual": "4–2",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Switzerland vs Bosnia and Herzegovina",
+        "actual": "4–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Mexico vs South Korea",
+        "actual": "1–0",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "United States vs Australia",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "Netherlands vs Sweden",
+        "actual": "5–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Japan",
+        "actual": "0–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Egypt",
+        "actual": "1–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "3–0",
+        "points": 5
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Jordan vs Algeria",
+        "actual": "1–2",
+        "prediction": "1–2",
+        "points": 5
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "1–2",
+        "points": 4
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Bosnia and Herzegovina vs Qatar",
+        "actual": "3–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Curaçao vs Ivory Coast",
+        "actual": "0–2",
+        "prediction": "0–2",
+        "points": 5
+      },
+      {
+        "match": "Japan vs Sweden",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Paraguay vs Australia",
+        "actual": "0–0",
+        "prediction": "2–2",
+        "points": 4
+      },
+      {
+        "match": "Norway vs France",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Senegal vs Iraq",
+        "actual": "5–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Egypt vs Iran",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "0–2",
+        "points": 5
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Portugal",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      }
+    ]
+  },
+  {
+    "name": "Neni",
+    "groupPoints": 127,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "United States vs Paraguay",
+        "actual": "4–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Ivory Coast vs Ecuador",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Iran vs New Zealand",
+        "actual": "2–2",
+        "prediction": "2–2",
+        "points": 5
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "3–0",
+        "points": 5
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Ghana vs Panama",
+        "actual": "1–0",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Switzerland vs Bosnia and Herzegovina",
+        "actual": "4–1",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "Netherlands vs Sweden",
+        "actual": "5–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Japan",
+        "actual": "0–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Norway vs Senegal",
+        "actual": "3–2",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "3–0",
+        "points": 5
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "2–0",
+        "points": 5
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "1–2",
+        "points": 4
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Switzerland vs Canada",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Czechia vs Mexico",
+        "actual": "0–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Norway vs France",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Egypt vs Iran",
+        "actual": "1–1",
+        "prediction": "2–2",
+        "points": 4
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Uruguay vs Spain",
+        "actual": "0–1",
+        "prediction": "1–3",
+        "points": 3
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "1–3",
+        "points": 4
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      }
+    ]
+  },
+  {
+    "name": "Maria João",
+    "groupPoints": 126,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Switzerland vs Bosnia and Herzegovina",
+        "actual": "4–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Mexico vs South Korea",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "3–0",
+        "points": 5
+      },
+      {
+        "match": "Turkey vs Paraguay",
+        "actual": "0–1",
+        "prediction": "1–2",
+        "points": 4
+      },
+      {
+        "match": "United States vs Australia",
+        "actual": "2–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "4–1",
+        "points": 3
+      },
+      {
+        "match": "Norway vs Senegal",
+        "actual": "3–2",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "2–0",
+        "points": 5
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Switzerland vs Canada",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "Czechia vs Mexico",
+        "actual": "0–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "South Africa vs South Korea",
+        "actual": "1–0",
+        "prediction": "1–0",
+        "points": 5
+      },
+      {
+        "match": "Curaçao vs Ivory Coast",
+        "actual": "0–2",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Turkey vs United States",
+        "actual": "3–2",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Norway vs France",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Senegal vs Iraq",
+        "actual": "5–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Uruguay vs Spain",
+        "actual": "0–1",
+        "prediction": "1–3",
+        "points": 3
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "1–3",
+        "points": 5
+      },
+      {
+        "match": "Congo DR vs Uzbekistan",
+        "actual": "3–1",
+        "prediction": "2–1",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "name": "Mário",
+    "groupPoints": 118,
+    "groupMatches": [
+      {
+        "match": "South Korea vs Czechia",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Canada vs Bosnia and Herzegovina",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "United States vs Paraguay",
+        "actual": "4–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "5–0",
+        "points": 3
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Iran vs New Zealand",
+        "actual": "2–2",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "4–1",
+        "points": 4
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "England vs Croatia",
+        "actual": "4–2",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "5–0",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Netherlands vs Sweden",
+        "actual": "5–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Japan",
+        "actual": "0–4",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Norway vs Senegal",
+        "actual": "3–2",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "1–3",
+        "points": 3
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "1–3",
+        "points": 3
+      },
+      {
+        "match": "Bosnia and Herzegovina vs Qatar",
+        "actual": "3–1",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Czechia vs Mexico",
+        "actual": "0–3",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "South Africa vs South Korea",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Turkey vs United States",
+        "actual": "3–2",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Norway vs France",
+        "actual": "1–4",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Egypt vs Iran",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Cape Verde vs Saudi Arabia",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "0–2",
+        "points": 5
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–4",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "name": "Bruno",
+    "groupPoints": 105,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Ghana vs Panama",
+        "actual": "1–0",
+        "prediction": "1–0",
+        "points": 5
+      },
+      {
+        "match": "England vs Croatia",
+        "actual": "4–2",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "1–3",
+        "points": 5
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Mexico vs South Korea",
+        "actual": "1–0",
+        "prediction": "1–0",
+        "points": 5
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "3–0",
+        "points": 5
+      },
+      {
+        "match": "United States vs Australia",
+        "actual": "2–0",
+        "prediction": "2–0",
+        "points": 5
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Czechia vs Mexico",
+        "actual": "0–3",
+        "prediction": "1–3",
+        "points": 3
+      },
+      {
+        "match": "South Africa vs South Korea",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Curaçao vs Ivory Coast",
+        "actual": "0–2",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Senegal vs Iraq",
+        "actual": "5–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "1–0",
+        "points": 4
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–3",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "name": "João Rede",
+    "groupPoints": 117,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "3–1",
+        "points": 4
+      },
+      {
+        "match": "United States vs Paraguay",
+        "actual": "4–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "6–0",
+        "points": 4
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "3–0",
+        "points": 5
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "3–1",
+        "points": 5
+      },
+      {
+        "match": "Ghana vs Panama",
+        "actual": "1–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "1–3",
+        "points": 5
+      },
+      {
+        "match": "Switzerland vs Bosnia and Herzegovina",
+        "actual": "4–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "5–0",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "5–0",
+        "points": 3
+      },
+      {
+        "match": "Ecuador vs Curaçao",
+        "actual": "0–0",
+        "prediction": "2–2",
+        "points": 4
+      },
+      {
+        "match": "Tunisia vs Japan",
+        "actual": "0–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "5–0",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Egypt",
+        "actual": "1–3",
+        "prediction": "1–3",
+        "points": 5
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "3–1",
+        "points": 4
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "1–3",
+        "points": 3
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "1–3",
+        "points": 5
+      },
+      {
+        "match": "Turkey vs United States",
+        "actual": "3–2",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Senegal vs Iraq",
+        "actual": "5–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Uruguay vs Spain",
+        "actual": "0–1",
+        "prediction": "1–3",
+        "points": 3
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "0–5",
+        "points": 3
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–4",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "name": "Diogo",
+    "groupPoints": 155,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "United States vs Paraguay",
+        "actual": "4–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Netherlands vs Japan",
+        "actual": "2–2",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Ghana vs Panama",
+        "actual": "1–0",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "England vs Croatia",
+        "actual": "4–2",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Switzerland vs Bosnia and Herzegovina",
+        "actual": "4–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Mexico vs South Korea",
+        "actual": "1–0",
+        "prediction": "1–0",
+        "points": 5
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "United States vs Australia",
+        "actual": "2–0",
+        "prediction": "2–0",
+        "points": 5
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "Netherlands vs Sweden",
+        "actual": "5–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Japan",
+        "actual": "0–4",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Egypt",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Jordan vs Algeria",
+        "actual": "1–2",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Bosnia and Herzegovina vs Qatar",
+        "actual": "3–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Curaçao vs Ivory Coast",
+        "actual": "0–2",
+        "prediction": "0–2",
+        "points": 5
+      },
+      {
+        "match": "Japan vs Sweden",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Norway vs France",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Senegal vs Iraq",
+        "actual": "5–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Egypt vs Iran",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Cape Verde vs Saudi Arabia",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Uruguay vs Spain",
+        "actual": "0–1",
+        "prediction": "1–2",
+        "points": 4
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Algeria vs Austria",
+        "actual": "3–3",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Portugal",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      }
+    ]
+  },
+  {
+    "name": "Maria",
+    "groupPoints": 154,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "South Korea vs Czechia",
+        "actual": "2–1",
+        "prediction": "3–2",
+        "points": 4
+      },
+      {
+        "match": "Canada vs Bosnia and Herzegovina",
+        "actual": "1–1",
+        "prediction": "2–2",
+        "points": 4
+      },
+      {
+        "match": "United States vs Paraguay",
+        "actual": "4–1",
+        "prediction": "3–2",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "1–2",
+        "points": 4
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Ghana vs Panama",
+        "actual": "1–0",
+        "prediction": "3–2",
+        "points": 4
+      },
+      {
+        "match": "England vs Croatia",
+        "actual": "4–2",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "0–4",
+        "points": 3
+      },
+      {
+        "match": "Czechia vs South Africa",
+        "actual": "1–1",
+        "prediction": "2–2",
+        "points": 4
+      },
+      {
+        "match": "Switzerland vs Bosnia and Herzegovina",
+        "actual": "4–1",
+        "prediction": "4–1",
+        "points": 5
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Mexico vs South Korea",
+        "actual": "1–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Turkey vs Paraguay",
+        "actual": "0–1",
+        "prediction": "2–3",
+        "points": 4
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "4–1",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Japan",
+        "actual": "0–4",
+        "prediction": "1–3",
+        "points": 3
+      },
+      {
+        "match": "Uruguay vs Cape Verde",
+        "actual": "2–2",
+        "prediction": "2–2",
+        "points": 5
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Egypt",
+        "actual": "1–3",
+        "prediction": "2–3",
+        "points": 3
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "3–0",
+        "points": 5
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Jordan vs Algeria",
+        "actual": "1–2",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "0–1",
+        "points": 5
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Czechia vs Mexico",
+        "actual": "0–3",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "South Africa vs South Korea",
+        "actual": "1–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Curaçao vs Ivory Coast",
+        "actual": "0–2",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "1–3",
+        "points": 5
+      },
+      {
+        "match": "Paraguay vs Australia",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Norway vs France",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "2–3",
+        "points": 3
+      },
+      {
+        "match": "Cape Verde vs Saudi Arabia",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Uruguay vs Spain",
+        "actual": "0–1",
+        "prediction": "2–3",
+        "points": 4
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–4",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "name": "Máriozinho",
+    "groupPoints": 153,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Canada vs Bosnia and Herzegovina",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Ivory Coast vs Ecuador",
+        "actual": "1–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "5–0",
+        "points": 3
+      },
+      {
+        "match": "Netherlands vs Japan",
+        "actual": "2–2",
+        "prediction": "0–0",
+        "points": 4
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "3–1",
+        "points": 5
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Ghana vs Panama",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "England vs Croatia",
+        "actual": "4–2",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Mexico vs South Korea",
+        "actual": "1–0",
+        "prediction": "1–0",
+        "points": 5
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Morocco",
+        "actual": "0–1",
+        "prediction": "1–2",
+        "points": 4
+      },
+      {
+        "match": "United States vs Australia",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Netherlands vs Sweden",
+        "actual": "5–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Japan",
+        "actual": "0–4",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Egypt",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Jordan vs Algeria",
+        "actual": "1–2",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "South Africa vs South Korea",
+        "actual": "1–0",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Curaçao vs Ivory Coast",
+        "actual": "0–2",
+        "prediction": "1–3",
+        "points": 4
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Norway vs France",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Senegal vs Iraq",
+        "actual": "5–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Cape Verde vs Saudi Arabia",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "0–2",
+        "points": 5
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "Algeria vs Austria",
+        "actual": "3–3",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Portugal",
+        "actual": "0–0",
+        "prediction": "2–2",
+        "points": 4
+      },
+      {
+        "match": "Congo DR vs Uzbekistan",
+        "actual": "3–1",
+        "prediction": "2–1",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "name": "Nucha",
+    "groupPoints": 135,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "2–0",
+        "points": 5
+      },
+      {
+        "match": "United States vs Paraguay",
+        "actual": "4–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–1",
+        "points": 5
+      },
+      {
+        "match": "Australia vs Turkey",
+        "actual": "2–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Saudi Arabia vs Uruguay",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "England vs Croatia",
+        "actual": "4–2",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Czechia vs South Africa",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Switzerland vs Bosnia and Herzegovina",
+        "actual": "4–1",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Mexico vs South Korea",
+        "actual": "1–0",
+        "prediction": "1–0",
+        "points": 5
+      },
+      {
+        "match": "Turkey vs Paraguay",
+        "actual": "0–1",
+        "prediction": "1–2",
+        "points": 4
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Ecuador vs Curaçao",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Netherlands vs Sweden",
+        "actual": "5–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Norway vs Senegal",
+        "actual": "3–2",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "South Africa vs South Korea",
+        "actual": "1–0",
+        "prediction": "1–0",
+        "points": 5
+      },
+      {
+        "match": "Curaçao vs Ivory Coast",
+        "actual": "0–2",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Japan vs Sweden",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Paraguay vs Australia",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Norway vs France",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Cape Verde vs Saudi Arabia",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Uruguay vs Spain",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "Colombia vs Portugal",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Congo DR vs Uzbekistan",
+        "actual": "3–1",
+        "prediction": "2–1",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "name": "Tio Zé",
+    "groupPoints": 143,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "3–1",
+        "points": 4
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Ivory Coast vs Ecuador",
+        "actual": "1–0",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "6–0",
+        "points": 4
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "3–0",
+        "points": 5
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "England vs Croatia",
+        "actual": "4–2",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Switzerland vs Bosnia and Herzegovina",
+        "actual": "4–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Mexico vs South Korea",
+        "actual": "1–0",
+        "prediction": "1–0",
+        "points": 5
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "5–0",
+        "points": 3
+      },
+      {
+        "match": "United States vs Australia",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Netherlands vs Sweden",
+        "actual": "5–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Japan",
+        "actual": "0–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Belgium vs Iran",
+        "actual": "0–0",
+        "prediction": "2–2",
+        "points": 4
+      },
+      {
+        "match": "New Zealand vs Egypt",
+        "actual": "1–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "1–2",
+        "points": 4
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "1–3",
+        "points": 3
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Switzerland vs Canada",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Bosnia and Herzegovina vs Qatar",
+        "actual": "3–1",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Curaçao vs Ivory Coast",
+        "actual": "0–2",
+        "prediction": "0–4",
+        "points": 3
+      },
+      {
+        "match": "Japan vs Sweden",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Turkey vs United States",
+        "actual": "3–2",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Paraguay vs Australia",
+        "actual": "0–0",
+        "prediction": "2–2",
+        "points": 4
+      },
+      {
+        "match": "Senegal vs Iraq",
+        "actual": "5–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Uruguay vs Spain",
+        "actual": "0–1",
+        "prediction": "1–2",
+        "points": 4
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–3",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "name": "Norberto",
+    "groupPoints": 135,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "United States vs Paraguay",
+        "actual": "4–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–1",
+        "points": 5
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "5–1",
+        "points": 3
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Saudi Arabia vs Uruguay",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Ghana vs Panama",
+        "actual": "1–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Portugal vs Congo DR",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Switzerland vs Bosnia and Herzegovina",
+        "actual": "4–1",
+        "prediction": "3–0",
+        "points": 4
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Mexico vs South Korea",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "4–1",
+        "points": 4
+      },
+      {
+        "match": "Scotland vs Morocco",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Turkey vs Paraguay",
+        "actual": "0–1",
+        "prediction": "0–1",
+        "points": 5
+      },
+      {
+        "match": "United States vs Australia",
+        "actual": "2–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Belgium vs Iran",
+        "actual": "0–0",
+        "prediction": "0–0",
+        "points": 5
+      },
+      {
+        "match": "New Zealand vs Egypt",
+        "actual": "1–3",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "0–1",
+        "points": 5
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Switzerland vs Canada",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Bosnia and Herzegovina vs Qatar",
+        "actual": "3–1",
+        "prediction": "4–1",
+        "points": 3
+      },
+      {
+        "match": "Curaçao vs Ivory Coast",
+        "actual": "0–2",
+        "prediction": "0–2",
+        "points": 5
+      },
+      {
+        "match": "Japan vs Sweden",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Senegal vs Iraq",
+        "actual": "5–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Egypt vs Iran",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "0–2",
+        "points": 5
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–1",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "name": "Susana",
+    "groupPoints": 122,
+    "groupMatches": [
+      {
+        "match": "South Korea vs Czechia",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "United States vs Paraguay",
+        "actual": "4–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Qatar vs Switzerland",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Ivory Coast vs Ecuador",
+        "actual": "1–0",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "1–3",
+        "points": 5
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "4–1",
+        "points": 4
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Ecuador vs Curaçao",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Netherlands vs Sweden",
+        "actual": "5–1",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Egypt",
+        "actual": "1–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Norway vs Senegal",
+        "actual": "3–2",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "4–1",
+        "points": 4
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "2–3",
+        "points": 3
+      },
+      {
+        "match": "Switzerland vs Canada",
+        "actual": "2–1",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Bosnia and Herzegovina vs Qatar",
+        "actual": "3–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "1–3",
+        "points": 5
+      },
+      {
+        "match": "Turkey vs United States",
+        "actual": "3–2",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Norway vs France",
+        "actual": "1–4",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Egypt vs Iran",
+        "actual": "1–1",
+        "prediction": "2–2",
+        "points": 4
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "1–4",
+        "points": 3
+      },
+      {
+        "match": "Uruguay vs Spain",
+        "actual": "0–1",
+        "prediction": "2–3",
+        "points": 4
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "1–4",
+        "points": 3
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "1–3",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "name": "Gonçalo",
+    "groupPoints": 165,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "2–0",
+        "points": 5
+      },
+      {
+        "match": "South Korea vs Czechia",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "United States vs Paraguay",
+        "actual": "4–1",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "5–0",
+        "points": 3
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Ghana vs Panama",
+        "actual": "1–0",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "England vs Croatia",
+        "actual": "4–2",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Switzerland vs Bosnia and Herzegovina",
+        "actual": "4–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Mexico vs South Korea",
+        "actual": "1–0",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "5–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Morocco",
+        "actual": "0–1",
+        "prediction": "1–2",
+        "points": 4
+      },
+      {
+        "match": "United States vs Australia",
+        "actual": "2–0",
+        "prediction": "2–0",
+        "points": 5
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "3–1",
+        "points": 3
+      },
+      {
+        "match": "Netherlands vs Sweden",
+        "actual": "5–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Egypt",
+        "actual": "1–3",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Norway vs Senegal",
+        "actual": "3–2",
+        "prediction": "1–0",
+        "points": 4
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "3–0",
+        "points": 5
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "Jordan vs Algeria",
+        "actual": "1–2",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "0–1",
+        "points": 5
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Scotland vs Brazil",
+        "actual": "0–3",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Switzerland vs Canada",
+        "actual": "2–1",
+        "prediction": "2–1",
+        "points": 5
+      },
+      {
+        "match": "Czechia vs Mexico",
+        "actual": "0–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "Curaçao vs Ivory Coast",
+        "actual": "0–2",
+        "prediction": "0–2",
+        "points": 5
+      },
+      {
+        "match": "Japan vs Sweden",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Tunisia vs Netherlands",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Turkey vs United States",
+        "actual": "3–2",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Norway vs France",
+        "actual": "1–4",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Senegal vs Iraq",
+        "actual": "5–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Uruguay vs Spain",
+        "actual": "0–1",
+        "prediction": "1–2",
+        "points": 4
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "0–2",
+        "points": 5
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "1–0",
+        "points": 4
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Congo DR vs Uzbekistan",
+        "actual": "3–1",
+        "prediction": "1–0",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "name": "Tio Fredo",
+    "groupPoints": 145,
+    "groupMatches": [
+      {
+        "match": "Mexico vs South Africa",
+        "actual": "2–0",
+        "prediction": "2–1",
+        "points": 3
+      },
+      {
+        "match": "United States vs Paraguay",
+        "actual": "4–1",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Haiti vs Scotland",
+        "actual": "0–1",
+        "prediction": "0–3",
+        "points": 3
+      },
+      {
+        "match": "Brazil vs Morocco",
+        "actual": "1–1",
+        "prediction": "0–0",
+        "points": 4
+      },
+      {
+        "match": "Ivory Coast vs Ecuador",
+        "actual": "1–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Germany vs Curaçao",
+        "actual": "7–1",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "Sweden vs Tunisia",
+        "actual": "5–1",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Belgium vs Egypt",
+        "actual": "1–1",
+        "prediction": "0–0",
+        "points": 4
+      },
+      {
+        "match": "France vs Senegal",
+        "actual": "3–1",
+        "prediction": "4–0",
+        "points": 3
+      },
+      {
+        "match": "Iraq vs Norway",
+        "actual": "1–4",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Argentina vs Algeria",
+        "actual": "3–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Austria vs Jordan",
+        "actual": "3–1",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Ghana vs Panama",
+        "actual": "1–0",
+        "prediction": "1–0",
+        "points": 5
+      },
+      {
+        "match": "England vs Croatia",
+        "actual": "4–2",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Uzbekistan vs Colombia",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      },
+      {
+        "match": "Czechia vs South Africa",
+        "actual": "1–1",
+        "prediction": "1–1",
+        "points": 5
+      },
+      {
+        "match": "Canada vs Qatar",
+        "actual": "6–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Brazil vs Haiti",
+        "actual": "3–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Scotland vs Morocco",
+        "actual": "0–1",
+        "prediction": "0–1",
+        "points": 5
+      },
+      {
+        "match": "Germany vs Ivory Coast",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Tunisia vs Japan",
+        "actual": "0–4",
+        "prediction": "0–1",
+        "points": 3
+      },
+      {
+        "match": "Spain vs Saudi Arabia",
+        "actual": "4–0",
+        "prediction": "3–0",
+        "points": 3
+      },
+      {
+        "match": "France vs Iraq",
+        "actual": "3–0",
+        "prediction": "3–0",
+        "points": 5
+      },
+      {
+        "match": "Argentina vs Austria",
+        "actual": "2–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Panama vs Croatia",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Portugal vs Uzbekistan",
+        "actual": "5–0",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Colombia vs Congo DR",
+        "actual": "1–0",
+        "prediction": "1–0",
+        "points": 5
+      },
+      {
+        "match": "Morocco vs Haiti",
+        "actual": "4–2",
+        "prediction": "2–0",
+        "points": 4
+      },
+      {
+        "match": "Switzerland vs Canada",
+        "actual": "2–1",
+        "prediction": "2–0",
+        "points": 3
+      },
+      {
+        "match": "Bosnia and Herzegovina vs Qatar",
+        "actual": "3–1",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "Czechia vs Mexico",
+        "actual": "0–3",
+        "prediction": "1–2",
+        "points": 3
+      },
+      {
+        "match": "South Africa vs South Korea",
+        "actual": "1–0",
+        "prediction": "1–0",
+        "points": 5
+      },
+      {
+        "match": "Turkey vs United States",
+        "actual": "3–2",
+        "prediction": "2–1",
+        "points": 4
+      },
+      {
+        "match": "Norway vs France",
+        "actual": "1–4",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Senegal vs Iraq",
+        "actual": "5–0",
+        "prediction": "1–0",
+        "points": 3
+      },
+      {
+        "match": "New Zealand vs Belgium",
+        "actual": "1–5",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Cape Verde vs Saudi Arabia",
+        "actual": "0–0",
+        "prediction": "1–1",
+        "points": 4
+      },
+      {
+        "match": "Uruguay vs Spain",
+        "actual": "0–1",
+        "prediction": "0–2",
+        "points": 3
+      },
+      {
+        "match": "Panama vs England",
+        "actual": "0–2",
+        "prediction": "0–2",
+        "points": 5
+      },
+      {
+        "match": "Croatia vs Ghana",
+        "actual": "2–1",
+        "prediction": "1–0",
+        "points": 4
+      },
+      {
+        "match": "Jordan vs Argentina",
+        "actual": "1–3",
+        "prediction": "0–2",
+        "points": 4
+      }
+    ]
+  }
+];
+  const knockoutPlayers = [
+  {
+    "name": "Diogo",
+    "right": {
+      "1/16": [
+        "Germany",
+        "Paraguay",
+        "France",
+        "Sweden",
+        "Canada",
+        "Netherlands",
+        "Morocco",
+        "Colombia",
+        "Croatia",
+        "Spain",
+        "Austria",
+        "United States",
+        "Algeria",
+        "Belgium",
+        "Brazil",
+        "Japan",
+        "Ecuador",
+        "Senegal",
+        "Mexico",
+        "England",
+        "Norway",
+        "Argentina",
+        "Egypt",
+        "Switzerland",
+        "Portugal",
+        "Ivory Coast"
+      ],
+      "1/8": [
+        "France",
+        "Canada",
+        "Spain",
+        "United States",
+        "Belgium",
+        "Brazil",
+        "Mexico",
+        "England",
+        "Argentina",
+        "Switzerland",
+        "Portugal"
+      ],
+      "1/4": [
+        "France",
+        "Spain",
+        "Belgium",
+        "England",
+        "Argentina"
+      ],
+      "1/2": [
+        "France",
+        "Spain",
+        "Argentina"
+      ],
+      "Final": [
+        "Spain",
+        "Argentina"
+      ]
+    },
+    "total": 235
+  },
+  {
+    "name": "Gi",
+    "right": {
+      "1/16": [
+        "Germany",
+        "Morocco",
+        "France",
+        "Japan",
+        "Canada",
+        "Netherlands",
+        "Colombia",
+        "Croatia",
+        "Spain",
+        "Austria",
+        "United States",
+        "Bosnia and Herzegovina",
+        "Belgium",
+        "Brazil",
+        "Sweden",
+        "Ivory Coast",
+        "Norway",
+        "Mexico",
+        "Ecuador",
+        "England",
+        "Senegal",
+        "Argentina",
+        "Egypt",
+        "Switzerland",
+        "Portugal",
+        "Ghana"
+      ],
+      "1/8": [
+        "France",
+        "Canada",
+        "Spain",
+        "United States",
+        "Belgium",
+        "Brazil",
+        "Norway",
+        "Mexico",
+        "England",
+        "Argentina",
+        "Switzerland",
+        "Portugal"
+      ],
+      "1/4": [
+        "France",
+        "Spain",
+        "England",
+        "Argentina"
+      ],
+      "1/2": [
+        "France",
+        "Spain"
+      ],
+      "Final": [
+        "Spain"
+      ]
+    },
+    "total": 225
+  },
+  {
+    "name": "Gonçalo",
+    "right": {
+      "1/16": [
+        "Germany",
+        "France",
+        "Paraguay",
+        "Netherlands",
+        "Morocco",
+        "Colombia",
+        "Croatia",
+        "Spain",
+        "Austria",
+        "Canada",
+        "Belgium",
+        "Brazil",
+        "Sweden",
+        "Ecuador",
+        "Norway",
+        "Mexico",
+        "Ivory Coast",
+        "England",
+        "Congo DR",
+        "Argentina",
+        "United States",
+        "Egypt",
+        "Switzerland",
+        "Portugal",
+        "Algeria"
+      ],
+      "1/8": [
+        "France",
+        "Colombia",
+        "Spain",
+        "Belgium",
+        "Brazil",
+        "Norway",
+        "Mexico",
+        "England",
+        "Argentina",
+        "United States",
+        "Switzerland",
+        "Portugal"
+      ],
+      "1/4": [
+        "France",
+        "Spain",
+        "Belgium",
+        "England",
+        "Argentina"
+      ],
+      "1/2": [
+        "France",
+        "Spain",
+        "England"
+      ],
+      "Final": [
+        "Spain"
+      ]
+    },
+    "total": 230
+  },
+  {
+    "name": "Maria",
+    "right": {
+      "1/16": [
+        "Germany",
+        "Paraguay",
+        "France",
+        "Japan",
+        "South Africa",
+        "Switzerland",
+        "Netherlands",
+        "Portugal",
+        "Croatia",
+        "Spain",
+        "Austria",
+        "United States",
+        "Ivory Coast",
+        "Belgium",
+        "Algeria",
+        "Brazil",
+        "Sweden",
+        "Ecuador",
+        "Senegal",
+        "Mexico",
+        "Morocco",
+        "England",
+        "Norway",
+        "Argentina",
+        "Australia",
+        "Egypt",
+        "Canada",
+        "Colombia",
+        "Ghana"
+      ],
+      "1/8": [
+        "France",
+        "Switzerland",
+        "Portugal",
+        "Spain",
+        "United States",
+        "Belgium",
+        "Brazil",
+        "Morocco",
+        "England",
+        "Argentina",
+        "Colombia"
+      ],
+      "1/4": [
+        "France",
+        "Switzerland",
+        "Spain",
+        "Belgium",
+        "England",
+        "Argentina"
+      ],
+      "1/2": [
+        "France",
+        "Argentina"
+      ],
+      "Final": [
+        "Argentina"
+      ]
+    },
+    "total": 245
+  },
+  {
+    "name": "Mariozinho",
+    "right": {
+      "1/16": [
+        "Ivory Coast",
+        "Australia",
+        "France",
+        "Japan",
+        "Switzerland",
+        "Netherlands",
+        "Morocco",
+        "Colombia",
+        "Croatia",
+        "Spain",
+        "Austria",
+        "Bosnia and Herzegovina",
+        "Belgium",
+        "South Africa",
+        "Brazil",
+        "Sweden",
+        "Germany",
+        "Norway",
+        "Mexico",
+        "England",
+        "Senegal",
+        "Argentina",
+        "United States",
+        "Egypt",
+        "Canada",
+        "Algeria",
+        "Portugal",
+        "Ghana"
+      ],
+      "1/8": [
+        "France",
+        "Switzerland",
+        "Morocco",
+        "Colombia",
+        "Spain",
+        "Belgium",
+        "Brazil",
+        "Mexico",
+        "England",
+        "Argentina",
+        "United States",
+        "Canada",
+        "Portugal"
+      ],
+      "1/4": [
+        "France",
+        "Morocco",
+        "Spain",
+        "Belgium",
+        "England",
+        "Argentina"
+      ],
+      "1/2": [
+        "France",
+        "Spain"
+      ]
+    },
+    "total": 245
+  },
+  {
+    "name": "Neni",
+    "right": {
+      "1/16": [
+        "Germany",
+        "Morocco",
+        "France",
+        "Australia",
+        "Canada",
+        "Netherlands",
+        "Colombia",
+        "Croatia",
+        "Spain",
+        "Austria",
+        "United States",
+        "Belgium",
+        "Brazil",
+        "Sweden",
+        "Ivory Coast",
+        "Norway",
+        "Mexico",
+        "England",
+        "Ecuador",
+        "Argentina",
+        "Switzerland",
+        "Japan",
+        "Portugal",
+        "Ghana"
+      ],
+      "1/8": [
+        "France",
+        "Canada",
+        "Spain",
+        "United States",
+        "Belgium",
+        "Brazil",
+        "Norway",
+        "Mexico",
+        "England",
+        "Argentina",
+        "Switzerland",
+        "Portugal"
+      ],
+      "1/4": [
+        "France",
+        "Spain",
+        "Belgium",
+        "England",
+        "Argentina"
+      ],
+      "1/2": [
+        "France",
+        "Spain"
+      ]
+    },
+    "total": 215
+  },
+  {
+    "name": "Norberto",
+    "right": {
+      "1/16": [
+        "Germany",
+        "Senegal",
+        "Egypt",
+        "Mexico",
+        "Bosnia and Herzegovina",
+        "Netherlands",
+        "Morocco",
+        "Colombia",
+        "Ghana",
+        "Spain",
+        "Austria",
+        "United States",
+        "Canada",
+        "Belgium",
+        "Norway",
+        "Brazil",
+        "Sweden",
+        "Ecuador",
+        "France",
+        "Ivory Coast",
+        "England",
+        "Congo DR",
+        "Argentina",
+        "Paraguay",
+        "Switzerland",
+        "Portugal",
+        "Croatia"
+      ],
+      "1/8": [
+        "Mexico",
+        "Spain",
+        "United States",
+        "Belgium",
+        "Brazil",
+        "France",
+        "England",
+        "Paraguay",
+        "Switzerland",
+        "Portugal"
+      ],
+      "1/4": [
+        "Spain",
+        "Belgium"
+      ],
+      "1/2": [
+        "Spain"
+      ],
+      "Final": [
+        "Spain"
+      ]
+    },
+    "total": 205
+  },
+  {
+    "name": "Nucha",
+    "right": {
+      "1/16": [
+        "Germany",
+        "Paraguay",
+        "France",
+        "Mexico",
+        "Switzerland",
+        "Netherlands",
+        "Colombia",
+        "Croatia",
+        "Spain",
+        "Argentina",
+        "United States",
+        "South Africa",
+        "Brazil",
+        "Ecuador",
+        "Norway",
+        "Ivory Coast",
+        "England",
+        "Congo DR",
+        "Austria",
+        "Australia",
+        "Belgium",
+        "Canada",
+        "Egypt",
+        "Portugal"
+      ],
+      "1/8": [
+        "France",
+        "Switzerland",
+        "Spain",
+        "Brazil",
+        "England",
+        "Canada",
+        "Portugal"
+      ],
+      "1/4": [
+        "Spain"
+      ],
+      "1/2": [
+        "Spain"
+      ],
+      "Final": [
+        "Spain"
+      ]
+    },
+    "total": 170
+  },
+  {
+    "name": "Susana",
+    "right": {
+      "1/16": [
+        "Germany",
+        "United States",
+        "France",
+        "Egypt",
+        "South Africa",
+        "Bosnia and Herzegovina",
+        "Netherlands",
+        "Colombia",
+        "Spain",
+        "Switzerland",
+        "Belgium",
+        "Brazil",
+        "Sweden",
+        "Ivory Coast",
+        "Norway",
+        "England",
+        "Argentina",
+        "Australia",
+        "Canada",
+        "Austria",
+        "Portugal",
+        "Croatia"
+      ],
+      "1/8": [
+        "France",
+        "Spain",
+        "Switzerland",
+        "Belgium",
+        "Brazil",
+        "Norway",
+        "England",
+        "Argentina",
+        "Portugal"
+      ],
+      "1/4": [
+        "France",
+        "Spain",
+        "Belgium",
+        "England",
+        "Argentina"
+      ],
+      "1/2": [
+        "France",
+        "Spain",
+        "Argentina"
+      ],
+      "Final": [
+        "Spain",
+        "Argentina"
+      ]
+    },
+    "total": 205
+  },
+  {
+    "name": "Bruno",
+    "right": {
+      "1/16": [
+        "Germany",
+        "Morocco",
+        "Senegal",
+        "United States",
+        "Switzerland",
+        "Netherlands",
+        "Colombia",
+        "Croatia",
+        "Austria",
+        "Ivory Coast",
+        "Belgium",
+        "South Africa",
+        "Brazil",
+        "Sweden",
+        "Ecuador",
+        "Norway",
+        "Mexico",
+        "England",
+        "France",
+        "Argentina",
+        "Spain",
+        "Paraguay",
+        "Canada",
+        "Portugal",
+        "Ghana"
+      ],
+      "1/8": [
+        "Colombia",
+        "Belgium",
+        "Brazil",
+        "Norway",
+        "Mexico",
+        "England",
+        "Spain",
+        "Paraguay",
+        "Canada",
+        "Portugal"
+      ],
+      "1/4": [
+        "Belgium",
+        "England",
+        "Spain"
+      ],
+      "1/2": []
+    },
+    "total": 190
+  },
+  {
+    "name": "Maria João",
+    "right": {
+      "1/16": [
+        "Germany",
+        "United States",
+        "France",
+        "Cape Verde",
+        "Canada",
+        "Sweden",
+        "Colombia",
+        "England",
+        "Spain",
+        "Austria",
+        "Paraguay",
+        "Senegal",
+        "Belgium",
+        "South Africa",
+        "Brazil",
+        "Netherlands",
+        "Ecuador",
+        "Norway",
+        "Mexico",
+        "Ivory Coast",
+        "Croatia",
+        "Congo DR",
+        "Argentina",
+        "Egypt",
+        "Switzerland",
+        "Portugal"
+      ],
+      "1/8": [
+        "France",
+        "Colombia",
+        "Spain",
+        "Paraguay",
+        "Belgium",
+        "Brazil",
+        "Norway",
+        "Mexico",
+        "Argentina",
+        "Switzerland",
+        "Portugal"
+      ],
+      "1/4": [
+        "Spain",
+        "Argentina"
+      ],
+      "1/2": [
+        "Spain"
+      ],
+      "Final": [
+        "Spain"
+      ]
+    },
+    "total": 205
+  },
+  {
+    "name": "Mário",
+    "right": {
+      "1/16": [
+        "Germany",
+        "Paraguay",
+        "France",
+        "Japan",
+        "South Africa",
+        "Canada",
+        "Netherlands",
+        "Colombia",
+        "Croatia",
+        "Spain",
+        "Austria",
+        "Switzerland",
+        "Belgium",
+        "Brazil",
+        "Sweden",
+        "Ecuador",
+        "Norway",
+        "Mexico",
+        "Ivory Coast",
+        "England",
+        "Argentina",
+        "United States",
+        "Bosnia and Herzegovina",
+        "Portugal",
+        "Ghana"
+      ],
+      "1/8": [
+        "France",
+        "Spain",
+        "Belgium",
+        "Brazil",
+        "Norway",
+        "Mexico",
+        "England",
+        "Argentina",
+        "United States",
+        "Portugal"
+      ],
+      "1/4": [
+        "France",
+        "Spain",
+        "Belgium",
+        "England",
+        "Argentina"
+      ],
+      "1/2": [
+        "France",
+        "Spain"
+      ],
+      "Final": [
+        "Spain"
+      ]
+    },
+    "total": 215
+  },
+  {
+    "name": "Tio Fredo",
+    "right": {
+      "1/16": [
+        "Germany",
+        "France",
+        "Australia",
+        "Bosnia and Herzegovina",
+        "Japan",
+        "Brazil",
+        "Colombia",
+        "Croatia",
+        "Spain",
+        "Austria",
+        "Canada",
+        "Belgium",
+        "South Africa",
+        "Morocco",
+        "Sweden",
+        "Ivory Coast",
+        "Norway",
+        "Mexico",
+        "England",
+        "Senegal",
+        "Argentina",
+        "United States",
+        "Switzerland",
+        "Egypt",
+        "Portugal",
+        "Ghana"
+      ],
+      "1/8": [
+        "France",
+        "Colombia",
+        "Spain",
+        "Belgium",
+        "Morocco",
+        "Mexico",
+        "England",
+        "Argentina",
+        "United States",
+        "Switzerland",
+        "Portugal"
+      ],
+      "1/4": [
+        "France",
+        "Spain",
+        "Belgium",
+        "Morocco",
+        "England",
+        "Argentina"
+      ],
+      "1/2": [
+        "France",
+        "Spain"
+      ]
+    },
+    "total": 225
+  },
+  {
+    "name": "Tio Zé",
+    "right": {
+      "1/16": [
+        "Germany",
+        "Morocco",
+        "France",
+        "Japan",
+        "Bosnia and Herzegovina",
+        "Netherlands",
+        "Colombia",
+        "Croatia",
+        "Spain",
+        "Austria",
+        "Ecuador",
+        "Belgium",
+        "Brazil",
+        "Sweden",
+        "Ivory Coast",
+        "Norway",
+        "Mexico",
+        "Cape Verde",
+        "England",
+        "Argentina",
+        "United States",
+        "Switzerland",
+        "Egypt",
+        "Portugal",
+        "Senegal"
+      ],
+      "1/8": [
+        "France",
+        "Spain",
+        "Belgium",
+        "Brazil",
+        "Norway",
+        "Mexico",
+        "England",
+        "Argentina",
+        "Switzerland",
+        "Portugal"
+      ],
+      "1/4": [
+        "Spain",
+        "England",
+        "Argentina"
+      ],
+      "1/2": [
+        "Spain",
+        "England"
+      ],
+      "Final": [
+        "Spain"
+      ]
+    },
+    "total": 205
+  },
+  {
+    "name": "João Rede",
+    "right": {
+      "1/16": [
+        "Germany",
+        "United States",
+        "France",
+        "Sweden",
+        "Canada",
+        "Japan",
+        "Colombia",
+        "Croatia",
+        "Spain",
+        "Austria",
+        "Belgium",
+        "Mexico",
+        "Brazil",
+        "Netherlands",
+        "Senegal",
+        "Morocco",
+        "England",
+        "Argentina",
+        "Australia",
+        "Switzerland",
+        "Egypt",
+        "Portugal",
+        "Norway"
+      ],
+      "1/8": [
+        "France",
+        "Canada",
+        "Spain",
+        "Belgium",
+        "Brazil",
+        "England",
+        "Argentina",
+        "Switzerland",
+        "Portugal"
+      ],
+      "1/4": [
+        "Belgium",
+        "Argentina"
+      ],
+      "1/2": []
+    },
+    "total": 170
+  }
+];
   const groupByName = new Map(groupPlayers.map(player => [player.name, player]));
   groupByName.set('Mariozinho', groupByName.get('Máriozinho'));
   window.SCOREBOARD_DATA = {
@@ -17,4 +4502,3 @@
     }),
   };
 })();
-
